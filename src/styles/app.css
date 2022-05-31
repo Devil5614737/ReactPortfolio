@@ -46,8 +46,8 @@ header .navContainer .navbar {
           align-items: center;
   -webkit-box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
           box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
-  position: -webkit-sticky;
-  position: sticky;
+  position: fixed;
+  width: 100%;
   top: 0;
   background-color: white;
   z-index: 9999999;
@@ -179,7 +179,7 @@ header .menuBtn {
 header .hero .heroTextContainer {
   position: relative;
   z-index: 12;
-  margin-top: 102px;
+  margin-top: 152px;
   display: -ms-grid;
   display: grid;
   place-items: center;
