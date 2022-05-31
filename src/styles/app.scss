@@ -55,6 +55,17 @@ overflow: hidden;
               font-size: 1.7em;
               font-weight: 500;
             }
+            &:nth-of-type(4){
+              a{
+                color: white;
+                padding: .5em 1em;
+                background-color: #ff001e;
+                border-radius: 4px;
+                &:hover{
+                  background-color: rgb(255, 59, 59);
+                }
+              }
+            }
           }
         }
         @media screen and (max-width:500px) {
@@ -66,6 +77,7 @@ overflow: hidden;
   }
 
   .links2 {
+    margin-top: 62px;
     display: grid;
     place-items: center;
     width: 50vw;
@@ -196,6 +208,9 @@ background: unset;
         background-color: $red;
         border: none;
         border-radius: 4px;
+        &:hover{
+          background-color: rgb(255, 59, 59);
+        }
         @media screen and (max-width:650px) {
           font-size: 1.5em;
         }

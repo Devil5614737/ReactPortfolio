@@ -73,6 +73,9 @@ menu.classList.toggle('active');
           <li>
             <a href="#about">About</a>
           </li>
+          <li>
+            <a href="#contact">Contact</a>
+          </li>
         </ul>
       </div>
      
@@ -82,21 +85,21 @@ menu.classList.toggle('active');
 </svg>:  <svg width="30" height="30" viewBox="0 0 48 48" fill="none">
           <path
             d="M7.94971 11.9498H39.9497"
-            stroke="white"
+            stroke={document.body.classList.contains('active')?'white':'black'}
             stroke-width="4"
             stroke-linecap="round"
             stroke-linejoin="round"
           />
           <path
             d="M7.94971 23.9498H39.9497"
-            stroke="white"
+            stroke={document.body.classList.contains('active')?'white':'black'}
             stroke-width="4"
             stroke-linecap="round"
             stroke-linejoin="round"
           />
           <path
             d="M7.94971 35.9498H39.9497"
-            stroke="white"
+            stroke={document.body.classList.contains('active')?'white':'black'}
             stroke-width="4"
             stroke-linecap="round"
             stroke-linejoin="round"
@@ -148,10 +151,13 @@ menu.classList.toggle('active');
             <a href="#!">Home</a>
           </li>
           <li>
-            <a href="#!">Projects</a>
+            <a href="#projects">Projects</a>
           </li>
           <li>
-            <a href="#!">About</a>
+            <a href="#about">About</a>
+          </li>
+          <li>
+            <a href="#contact">Contact</a>
           </li>
         </ul>
       </div>
