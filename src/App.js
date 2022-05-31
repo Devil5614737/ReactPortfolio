@@ -6,14 +6,14 @@ import NetflixThumbnail from './assets/netflixThumbnail.png';
 import { useState } from 'react';
 import myImg from './assets/myImg.jpg';
 // import { useViewportScroll,motion, useTransform } from 'framer-motion';
-
-
+import emailjs from '@emailjs/browser';
+import {useRef} from 'react'
 
 
 function App() {
 const[darkTheme,setDarkTheme]=useState(false)
 // const { scrollYProgress } = useViewportScroll()
-
+const form = useRef();
 
 
 const handleTheme=()=>{
@@ -25,6 +25,29 @@ const handleTheme=()=>{
 
 
 // const scale = useTransform(scrollYProgress, [0, 1], [0.2, 2]);
+
+
+const sendEmail = (e) => {
+  e.preventDefault();
+
+  emailjs.sendForm('service_34bfr0i', 'template_km9isc6', form.current, 'user_aFdDwylEm3OuZU7xFR8TL')
+    .then((result) => {
+        if(result.status===200){
+          window.alert('message sent successfully')
+          console.log(form)
+          document.getElementById('name').value='';
+          document.getElementById('email').value='';
+          document.getElementById('message').value='';
+        }
+    }, (error) => {
+        console.log(error.text);
+    });
+};
+
+
+
+
+
   return (
    <>
    <header >
@@ -225,22 +248,21 @@ If you have any project or job feel free to contact me..
 
          </div>
        </div>
-       <form >
+       <form ref={form} onSubmit={sendEmail} >
          <div className="label">
            <label htmlFor="name">Name</label>
-           <input id='name' type="text" />
+           <input id='name' type="text" name="user_name" required />
          </div>
          <div className="label">
            <label htmlFor="email">Email</label>
-           <input id
-           email type="text" />
+           <input id='email' type="email" name="user_email" required/>
          </div>
          <div className="label">
            <label htmlFor="message">Message</label>
-           <textarea  id='message'></textarea>
+           <textarea  id='message' name='message' required></textarea>
          </div>
          <a href="#!" className="btn">
-         <Button className='formBtn'>Submit</Button>
+         <input className='formBtn' type="submit" value="Send"/>
          </a>
        </form>
       </div>

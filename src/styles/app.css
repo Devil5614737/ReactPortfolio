@@ -10,8 +10,8 @@ html {
 }
 
 body {
-  -webkit-transition: all .4s linear;
-  transition: all .4s linear;
+  -webkit-transition: all 0.4s cubic-bezier(0.12, 0.77, 0.61, 0.79);
+  transition: all 0.4s cubic-bezier(0.12, 0.77, 0.61, 0.79);
   overflow-x: hidden;
   font-family: "Inter",sans-serif;
 }
@@ -57,6 +57,12 @@ header .navContainer .navbar .logo p {
   font-weight: bold;
   color: #0E34FF;
   font-size: 2.4em;
+}
+
+@media screen and (max-width: 650px) {
+  header .navContainer .navbar .logo p {
+    font-size: 2em;
+  }
 }
 
 header .navContainer .navbar .links ul {
@@ -185,6 +191,18 @@ header .hero .heroTextContainer .topTitle {
   color: black;
 }
 
+@media screen and (max-width: 650px) {
+  header .hero .heroTextContainer .topTitle {
+    font-size: 2em;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  header .hero .heroTextContainer .topTitle {
+    font-size: 1.7em;
+  }
+}
+
 header .hero .heroTextContainer .title {
   font-weight: bold;
   font-size: 7em;
@@ -208,15 +226,27 @@ header .hero .heroTextContainer .title::before {
   z-index: -1;
 }
 
+@media screen and (max-width: 650px) {
+  header .hero .heroTextContainer .title::before {
+    background: unset;
+  }
+}
+
 @media screen and (max-width: 1024px) {
   header .hero .heroTextContainer .title {
     font-size: 6em;
   }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 650px) {
   header .hero .heroTextContainer .title {
     font-size: 4em;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  header .hero .heroTextContainer .title {
+    font-size: 3.3em;
   }
 }
 
@@ -230,6 +260,18 @@ header .hero .heroTextContainer .heroBtn {
   background-color: #FF001E;
   border: none;
   border-radius: 4px;
+}
+
+@media screen and (max-width: 650px) {
+  header .hero .heroTextContainer .heroBtn {
+    font-size: 1.5em;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  header .hero .heroTextContainer .heroBtn {
+    font-size: 1.2em;
+  }
 }
 
 main {
@@ -305,6 +347,13 @@ main .projectsSection .wrapper .projects .card {
   width: 100%;
   padding-bottom: 5em;
   position: relative;
+  -webkit-transition: all 0.4s cubic-bezier(0.12, 0.77, 0.61, 0.79);
+  transition: all 0.4s cubic-bezier(0.12, 0.77, 0.61, 0.79);
+}
+
+main .projectsSection .wrapper .projects .card:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 main .projectsSection .wrapper .projects .card img {
@@ -622,9 +671,9 @@ main .contactSection .wrapper form .label:nth-of-type(3) {
   width: 100%;
   height: 55px;
   border: none;
-  background-color: blue;
   color: white;
   font-size: 2em;
+  background-color: blue !important;
 }
 
 body.active {

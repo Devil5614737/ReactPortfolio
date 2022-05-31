@@ -1,14 +1,13 @@
 
-import Tilt from 'react-tilt'
+
 
 const Card = ({title,img}) => {
 
-const options={ max : 25,easing:         "cubic-bezier(.03,.98,.52,.99)",transition:true,scale:2 ,maxGlare: .5}
 
 
     return (  
 
-        <Tilt  options={options}    
+        <div   
          className="card">
            <img src={img} alt='thumbnail of project'/>
            <div className="projectInfo">
@@ -34,7 +33,7 @@ const options={ max : 25,easing:         "cubic-bezier(.03,.98,.52,.99)",transit
                    </a>
                </div>
            </div>
-        </Tilt >
+        </div >
     );
 }
  
