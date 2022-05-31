@@ -140,11 +140,22 @@ function App() {
               <p>tools and technologies i know</p>
             </div>
             <div className="skillsContainer">
+            <div className="skills">
+              <svg width="85" height="85" viewBox="0 0 192 173" fill="none">
+<path d="M35.4121 147.055L21.9301 10.8125H170.07L156.57 147.034L95.91 162.188L35.4121 147.055Z" fill="#E44F26"/>
+<path d="M96 150.607L145.02 138.362L156.552 21.9548H96V150.607Z" fill="#F1662A"/>
+<path d="M96 72.4817H71.46L69.768 55.3709H96V38.6602H49.5L49.944 43.1473L54.498 89.1924H96V72.4817ZM96 115.878L95.916 115.899L75.264 110.877L73.944 97.5504H55.326L57.924 123.782L95.916 133.286L96 133.264V115.878Z" fill="#EBEBEB"/>
+<path d="M95.934 72.4817V89.1924H118.77L116.622 110.866L95.934 115.894V133.28L133.956 123.782L134.232 120.96L138.588 76.9688L139.044 72.4817H95.934ZM95.934 38.6602V55.3709H140.73L141.102 51.6189L141.948 43.1473L142.392 38.6602H95.934Z" fill="white"/>
+</svg>
+
+
+                <p>HTML</p>
+              </div>
               <div className="skills">
                 <svg
                   className="icon"
-                  width="100"
-                  height="100"
+                  width="85"
+                  height="85"
                   viewBox="0 0 149 133"
                   fill="none"
                 >
@@ -164,42 +175,25 @@ function App() {
 
                 <p>Javascript</p>
               </div>
+              
               <div className="skills">
-                <svg
-                  className="icon"
-                  width="100"
-                  height="100"
-                  viewBox="0 0 150 144"
-                  fill="none"
-                >
-                  <g clip-path="url(#clip0_13_71)">
-                    <path
-                      d="M141.104 127.044L82.9245 139.163L24.7455 127.044L11.3207 14.5117H154.528L141.104 127.044Z"
-                      fill="#E44D26"
-                    />
-                    <path
-                      d="M82.9193 22.3024V130.398L130.134 119.717L142.694 22.3024H82.9193Z"
-                      fill="#FF6C39"
-                    />
-                    <path
-                      d="M125.689 37.8837H39.996L42.0058 53.4651L45.1715 80.7326H100.834L99.0188 96.2516L82.9194 100.17L66.8455 96.2516L65.7766 88.5233H46.1125L48.46 107.949L82.9194 115.752L117.328 107.945L122.391 65.1512H63.7514L62.4728 53.4651H123.833L125.689 37.8837Z"
-                      fill="#161616"
-                    />
-                  </g>
-                  <defs>
-                    <clipPath id="clip0_13_71">
-                      <rect width="100" height="100" fill="white" />
-                    </clipPath>
-                  </defs>
-                </svg>
+              <svg width="85" height="85" viewBox="0 0 175 171" fill="none" >
+<path d="M32.2766 145.355L19.9938 10.6875H155.006L142.707 145.334L87.418 160.312L32.2766 145.355Z" fill="#1572B6"/>
+<path d="M87.5 148.866L132.18 136.763L142.691 21.7009H87.5V148.866Z" fill="#33A9DC"/>
+<path d="M87.5 70.4893H109.867L111.409 53.5764H87.5V37.0588H129.883L129.478 41.4888L125.327 87.0069H87.5V70.4893Z" fill="white"/>
+<path d="M87.6039 113.384L87.5273 113.405L68.7039 108.435L67.5008 95.2629H50.5312L52.8992 121.196L87.5219 130.59L87.6039 130.569V113.384Z" fill="#EBEBEB"/>
+<path d="M108.429 86.3069L106.394 108.425L87.5437 113.394V130.58L122.194 121.196L122.451 118.407L125.387 86.3069H108.429Z" fill="white"/>
+<path d="M87.5601 37.0588V53.5764H46.7304L46.3914 49.8625L45.6203 41.4888L45.2156 37.0588H87.5601ZM87.5 70.4893V87.0069H68.9117L68.5726 83.293L67.807 74.9193L67.4023 70.4893H87.5Z" fill="#EBEBEB"/>
+</svg>
 
-                <p>HTML</p>
+
+                <p>CSS</p>
               </div>
               <div className="skills">
                 <svg
                   className="icon"
-                  width="100"
-                  height="100"
+                  width="85"
+                  height="85"
                   viewBox="0 0 135 144"
                   fill="none"
                 >
@@ -226,8 +220,8 @@ function App() {
               <div className="skills">
                 <svg
                   className="icon"
-                  width="100"
-                  height="100"
+                  width="85"
+                  height="85"
                   viewBox="0 0 159 149"
                   fill="none"
                 >
@@ -254,8 +248,8 @@ function App() {
               <div className="skills">
                 <svg
                   className="icon"
-                  width="100"
-                  height="100"
+                  width="85"
+                  height="85"
                   viewBox="0 0 222 211"
                   fill="none"
                 >
@@ -270,8 +264,8 @@ function App() {
               <div className="skills">
                 <svg
                   className="icon nextjs"
-                  width="100"
-                  height="100"
+                  width="85"
+                  height="85"
                   viewBox="0 0 202 197"
                   fill="none"
                 >
@@ -288,8 +282,8 @@ function App() {
               <div className="skills">
                 <svg
                   className="icon"
-                  width="100"
-                  height="100"
+                  width="85"
+                  height="85"
                   viewBox="0 0 184 168"
                   fill="none"
                 >
@@ -304,8 +298,8 @@ function App() {
               <div className="skills">
                 <svg
                   className="icon"
-                  width="100"
-                  height="100"
+                  width="85"
+                  height="85"
                   viewBox="0 0 167 168"
                   fill="none"
                 >
@@ -328,8 +322,8 @@ function App() {
               <div className="skills ">
                 <svg
                   className="icon tailwind"
-                  width="100"
-                  height="100"
+                  width="85"
+                  height="85"
                   viewBox="0 0 180 165"
                   fill="none"
                 >
@@ -344,8 +338,8 @@ function App() {
               <div className="skills">
                 <svg
                   className="icon"
-                  width="100"
-                  height="100"
+                  width="85"
+                  height="85"
                   viewBox="0 0 181 165"
                   fill="none"
                 >
@@ -360,8 +354,8 @@ function App() {
               <div className="skills">
                 <svg
                   className="icon"
-                  width="100"
-                  height="100"
+                  width="85"
+                  height="85"
                   viewBox="0 0 273 88"
                   fill="none"
                 >
