@@ -150,15 +150,16 @@ header .links2 {
   display: -ms-grid;
   display: grid;
   place-items: center;
-  width: 50vw;
-  height: 70vh;
+  width: 100vw;
+  height: 90vh;
   float: right;
   position: absolute;
-  right: -100%;
+  right: -130%;
   z-index: 1213;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.9);
   -webkit-transition: all .4s linear;
   transition: all .4s linear;
+  padding-bottom: 4em;
 }
 
 header .links2 ul {
@@ -173,17 +174,19 @@ header .links2 ul {
       grid-template-rows: repeat(4, 1fr);
 }
 
+header .links2 ul li {
+  margin-top: 52px;
+}
+
 header .links2 ul .themeBtn {
   width: 30px;
   height: 30px;
   display: -ms-grid;
   display: grid;
   place-items: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   background-color: white;
-  margin: 0 auto;
+  margin-right: -24px;
+  text-align: center;
   cursor: pointer;
   border-radius: 5px;
   -webkit-box-shadow: 5px 5px 12px rgba(0, 0, 0, 0.1);
