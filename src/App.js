@@ -40,17 +40,17 @@ function App() {
    
   },[])
   const projectsSection = {
-    visible: {y:0, opacity: 1, transition: { duration: 1 } },
+    visible: {y:0, opacity: 1, scale:1,transition: { duration: 1 } },
     hidden: { opacity: 0, scale: 0 }
 
 
   };
-  const aboutSection = {
-    visible: {y:0, opacity: 1, transition: { duration: 1,delay:.4 } },
-    hidden: { opacity: 0, scale: 0 }
+  // const aboutSection = {
+  //   visible: {y:0, opacity: 1, transition: { duration: 1,delay:.4 } },
+  //   hidden: { opacity: 0, scale: 0 }
 
 
-  };
+  // };
 
   // TODO:add the css icon in icons container
 
@@ -104,7 +104,7 @@ function App() {
               <span className="span1">Front-End</span> Web <br />
               De<span className="span2">veloper</span>
             </motion.p>
-            <motion.a animate={{ y: 0,opacity:1,scale:1 }}  transition={{ duration: 1,delay:.8 }} initial={{opacity:0,scale:.5}} href="#projects">
+            <motion.a animate={{ y: 0,opacity:1,scale:1 }}  transition={{ duration: 1,delay:.8 }} initial={{opacity:0,scale:.1}} href="#projects">
               <Button className="heroBtn">Projects</Button>
             </motion.a>
           </div>
@@ -113,7 +113,7 @@ function App() {
       <main id="home">
         <motion.div ref={ref}
       animate={controls}
-      // initial={{opacity:0,y:112}}
+      initial={{opacity:0,y:152}}
       variants={projectsSection}  id="projects" className="projectsSection">
           <div className="wrapper">
             <div className="projectsTitle">
@@ -130,10 +130,11 @@ function App() {
             </div>
           </div>
         </motion.div>
-        <motion.div ref={ref}
+        {/* ref={ref}
       animate={controls}
-      // initial={{opacity:0,y:112}}
-      variants={aboutSection} id="skills" className="skillsSection">
+      initial={{opacity:0,y:112}}
+      variants={aboutSection}  */}
+        <motion.div id="skills" className="skillsSection">
           <div className="wrapper">
             <div className="skillsTitle">
               <h1>Skills</h1>
@@ -398,10 +399,11 @@ function App() {
             </div>
           </div>
         </motion.div>
-        <motion.div ref={ref}
-      animate={controls}
-      // initial={{opacity:0,y:112}}
-      variants={aboutSection} id="about" className="aboutSection">
+        ref={ref}
+      {/* animate={controls}
+      initial={{opacity:0,y:112}}
+      variants={aboutSection}  */}
+        <motion.div id="about" className="aboutSection">
           <div className="wrapper">
             <div className="aboutTitle">
               <h1>About</h1>
@@ -445,10 +447,11 @@ function App() {
             </div>
           </div>
         </motion.div>
-        <motion.div ref={ref}
-      animate={controls}
-      // initial={{opacity:0,y:112}}
-      variants={aboutSection} id="contact" className="contactSection">
+        ref={ref}
+      {/* animate={controls}
+      initial={{opacity:0,y:112}}
+      variants={aboutSection}  */}
+        <motion.div id="contact" className="contactSection">
           <div className="wrapper">
             <div className="skillsTitle">
               <h1>Contact</h1>
