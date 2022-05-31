@@ -113,7 +113,7 @@ function App() {
       <main id="home">
         <motion.div ref={ref}
       animate={controls}
-      initial={{opacity:0,y:112}}
+      // initial={{opacity:0,y:112}}
       variants={projectsSection}  id="projects" className="projectsSection">
           <div className="wrapper">
             <div className="projectsTitle">
@@ -132,7 +132,7 @@ function App() {
         </motion.div>
         <motion.div ref={ref}
       animate={controls}
-      initial={{opacity:0,y:112}}
+      // initial={{opacity:0,y:112}}
       variants={aboutSection} id="skills" className="skillsSection">
           <div className="wrapper">
             <div className="skillsTitle">
@@ -406,7 +406,7 @@ function App() {
         </motion.div>
         <motion.div ref={ref}
       animate={controls}
-      initial={{opacity:0,y:112}}
+      // initial={{opacity:0,y:112}}
       variants={aboutSection} id="about" className="aboutSection">
           <div className="wrapper">
             <div className="aboutTitle">
@@ -453,7 +453,7 @@ function App() {
         </motion.div>
         <motion.div ref={ref}
       animate={controls}
-      initial={{opacity:0,y:112}}
+      // initial={{opacity:0,y:112}}
       variants={aboutSection} id="contact" className="contactSection">
           <div className="wrapper">
             <div className="skillsTitle">
