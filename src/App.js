@@ -2,7 +2,6 @@ import Navbar from "./components/Navbar";
 import "./styles/app.css";
 import Button from "./components/Button";
 import Card from "./components/Card";
-import NetflixThumbnail from "./assets/netflixThumbnail.png";
 import { useState } from "react";
 import myImg from "./assets/myImg.jpg";
 // import { useViewportScroll,motion, useTransform } from 'framer-motion';
@@ -11,6 +10,12 @@ import { useRef } from "react";
 import { motion ,useAnimation} from "framer-motion";
 import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
+import Ecommerce from './assets/ecommerce.png';
+import Google from './assets/google.png';
+import Instagram from './assets/instagram.png';
+import MarvelCharacters from './assets/marvelCharacter.webp';
+import SnakeGame from './assets/snakeGame.webp';
+import Netflix from './assets/thumbnail.webp';
 
 function App() {
   const [darkTheme, setDarkTheme] = useState(false);
@@ -116,12 +121,12 @@ function App() {
               <p>here are some of my projects</p>
             </div>
             <div  className="projects">
-              <Card title="Netflix Clone" img={NetflixThumbnail} />
-              <Card title="Netflix Clone" img={NetflixThumbnail} />
-              <Card title="Netflix Clone" img={NetflixThumbnail} />
-              <Card title="Netflix Clone" img={NetflixThumbnail} />
-              <Card title="Netflix Clone" img={NetflixThumbnail} />
-              <Card title="Netflix Clone" img={NetflixThumbnail} />
+              <Card title="Netflix Clone" img={Netflix} github='https://github.com/Devil5614737/Netflix-Clone-next.js-' demo='https://netflix-clone-next-js-ten.vercel.app/'/>
+              <Card title="Ecommerce App" img={Ecommerce} github='https://github.com/Devil5614737/EcommerceShoeStore' demo='https://ecommerce-shoe-store.vercel.app/'/>
+              <Card title="Snake Game" img={SnakeGame} github='https://github.com/Devil5614737/SnakeGame' demo='https://snake-game-xi.vercel.app/'/>
+              <Card title="Google Clone" img={Google} github='https://github.com/Devil5614737/GoogleClone2' demo='https://google-clone2-steel.vercel.app/' />
+              <Card title="Instagram Clone" img={Instagram} github='https://github.com/Devil5614737/Instagram-2.0' demo='https://instagram-2-0-omega.vercel.app/'/>
+              <Card title="Marvel Characters" img={MarvelCharacters} github='https://github.com/Devil5614737/ComicCharactersApp' demo='https://comic-characters-app.vercel.app/characters/character'/>
             </div>
           </div>
         </motion.div>
@@ -455,7 +460,7 @@ function App() {
               <h1>Contact</h1>
               <p>Wanna hire me? Let's Talk!</p>
               <div className="iconsContainer">
-                <a href="#!">
+                <a target="_blank" href="https://www.linkedin.com/in/kaushik-sheel/" rel="noreferrer">
                   <svg width="25" height="25" viewBox="0 0 47 47" fill="none">
                     <path
                       d="M40.0462 39.5558H33.0823V28.8497C33.0823 26.2968 33.0359 23.0103 29.4604 23.0103C25.8333 23.0103 25.2783 25.792 25.2783 28.6639V39.555H18.3146V17.5392H24.9998V20.5479H25.0934C25.7624 19.4249 26.7292 18.5011 27.8908 17.8748C29.0524 17.2485 30.3652 16.9432 31.6896 16.9915C38.7478 16.9915 40.0491 21.549 40.0491 27.4782L40.0462 39.5558ZM10.4568 14.5299C8.22482 14.5303 6.41513 12.7543 6.41477 10.5633C6.4144 8.37226 8.22335 6.59576 10.4553 6.5954C12.6872 6.59486 14.4969 8.37082 14.4973 10.5618C14.4975 11.614 14.0719 12.6232 13.3142 13.3673C12.5564 14.1115 11.5286 14.5297 10.4568 14.5299ZM13.9388 39.5559H6.96757V17.5392H13.9386V39.5558L13.9388 39.5559ZM43.518 0.246522H3.46827C1.57542 0.225616 0.0231328 1.71411 0 3.57226V43.0516C0.0223984 44.9107 1.5745 46.4006 3.46809 46.3812H43.518C45.4156 46.4042 46.9737 44.9143 47 43.0516V3.5692C46.973 1.70745 45.4147 0.219127 43.518 0.243458"
@@ -463,7 +468,7 @@ function App() {
                     />
                   </svg>
                 </a>
-                <a href="#!">
+                <a target="_blank" href="https://github.com/Devil5614737" rel='noreferrer'>
                   <svg width="25" height="25" viewBox="0 0 55 51" fill="none">
                     <path
                       fill-rule="evenodd"
