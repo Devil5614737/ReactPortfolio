@@ -90,11 +90,12 @@ header .navContainer .navbar .links ul .themeBtn {
 }
 
 header .navContainer .navbar .links ul li {
-  margin-left: 32px;
+  margin-left: 52px;
 }
 
 header .navContainer .navbar .links ul li a {
   font-size: 1.7em;
+  font-weight: 500;
 }
 
 @media screen and (max-width: 500px) {
@@ -686,6 +687,10 @@ body.active .navContainer .navbar {
 
 body.active .navContainer .navbar .links {
   color: white;
+}
+
+body.active .navContainer .navbar .themeBtn {
+  background-color: white;
 }
 
 body.active .navContainer .navbar .themeBtn #moon {

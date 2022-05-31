@@ -50,9 +50,10 @@ overflow: hidden;
            
           }
           li {
-            margin-left: 32px;
+            margin-left: 52px;
             a {
               font-size: 1.7em;
+              font-weight: 500;
             }
           }
         }
@@ -502,6 +503,8 @@ body.active {
                 color: white;
             }
             .themeBtn{
+              background-color: white;
+              
                 #moon{
                     filter:invert(1)
                 }

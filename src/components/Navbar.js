@@ -1,20 +1,26 @@
-import { useState } from "react";
+import { useState,useEffect } from "react";
 
 const Navbar = ({ darkTheme, setDarkTheme, ...props }) => {
     const[open,setOpen]=useState(false);
 
 const hamMenu=()=>{
 let menu=document.querySelector('.links2')
-menu.classList.toggle('active')
+menu.classList.toggle('active');
+
+
+
 }
 
     const handleNav=()=>{
         setOpen(open?false:true)
       hamMenu()
+     
+      
     }
 
-    
 
+
+ 
 
   return (
       <>
@@ -44,7 +50,7 @@ menu.classList.toggle('active')
                 </g>
                 <defs>
                   <clipPath id="clip0_149_2">
-                    <rect width="12" height="12" fill="white" />
+                    <rect width="12" height="12" fill="black" />
                   </clipPath>
                 </defs>
               </svg>

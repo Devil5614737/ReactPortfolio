@@ -8,21 +8,57 @@ import myImg from "./assets/myImg.jpg";
 // import { useViewportScroll,motion, useTransform } from 'framer-motion';
 import emailjs from "@emailjs/browser";
 import { useRef } from "react";
-import { motion } from "framer-motion";
+import { motion ,useAnimation} from "framer-motion";
+import { useEffect } from "react";
+import { useInView } from "react-intersection-observer";
 
 function App() {
   const [darkTheme, setDarkTheme] = useState(false);
   // const { scrollYProgress } = useViewportScroll()
+  const controls = useAnimation();
+  const [ref, inView] = useInView();
+
+
   const form = useRef();
 
   const handleTheme = () => {
     setDarkTheme(!darkTheme ? true : false);
     document.body.classList.toggle("active");
+    localStorage.setItem('theme','dark')
+    if(!document.body.classList.contains('active')){
+      localStorage.removeItem('theme')
+     }
+  };
+
+  useEffect(()=>{
+    localStorage.getItem('theme')&&document.body.classList.add('active')
+   
+  },[])
+  const projectsSection = {
+    visible: {y:0, opacity: 1, transition: { duration: 1 } },
+    hidden: { opacity: 0, scale: 0 }
+
+
+  };
+  const aboutSection = {
+    visible: {y:0, opacity: 1, transition: { duration: 1,delay:.4 } },
+    hidden: { opacity: 0, scale: 0 }
+
+
   };
 
   // TODO:add the css icon in icons container
 
   // const scale = useTransform(scrollYProgress, [0, 1], [0.2, 2]);
+
+
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    }
+    console.log(inView)
+  }, [controls, inView]);
+
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -70,13 +106,16 @@ function App() {
         </div>
       </header>
       <main id="home">
-        <div id="projects" className="projectsSection">
+        <motion.div ref={ref}
+      animate={controls}
+      initial={{opacity:0,y:112}}
+      variants={projectsSection}  id="projects" className="projectsSection">
           <div className="wrapper">
             <div className="projectsTitle">
               <h1>Projects</h1>
               <p>here are some of my projects</p>
             </div>
-            <div className="projects">
+            <div  className="projects">
               <Card title="Netflix Clone" img={NetflixThumbnail} />
               <Card title="Netflix Clone" img={NetflixThumbnail} />
               <Card title="Netflix Clone" img={NetflixThumbnail} />
@@ -85,8 +124,11 @@ function App() {
               <Card title="Netflix Clone" img={NetflixThumbnail} />
             </div>
           </div>
-        </div>
-        <div id="skills" className="skillsSection">
+        </motion.div>
+        <motion.div ref={ref}
+      animate={controls}
+      initial={{opacity:0,y:112}}
+      variants={aboutSection} id="skills" className="skillsSection">
           <div className="wrapper">
             <div className="skillsTitle">
               <h1>Skills</h1>
@@ -356,8 +398,11 @@ function App() {
               </div>
             </div>
           </div>
-        </div>
-        <div id="about" className="aboutSection">
+        </motion.div>
+        <motion.div ref={ref}
+      animate={controls}
+      initial={{opacity:0,y:112}}
+      variants={aboutSection} id="about" className="aboutSection">
           <div className="wrapper">
             <div className="aboutTitle">
               <h1>About</h1>
@@ -400,8 +445,11 @@ function App() {
               </div>
             </div>
           </div>
-        </div>
-        <div id="contact" className="contactSection">
+        </motion.div>
+        <motion.div ref={ref}
+      animate={controls}
+      initial={{opacity:0,y:112}}
+      variants={aboutSection} id="contact" className="contactSection">
           <div className="wrapper">
             <div className="skillsTitle">
               <h1>Contact</h1>
@@ -449,7 +497,7 @@ function App() {
               </a>
             </form>
           </div>
-        </div>
+        </motion.div>
       </main>
     </>
   );
