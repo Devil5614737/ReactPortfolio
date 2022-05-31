@@ -277,6 +277,9 @@ main {
         @media screen and (max-width: 600px) {
           grid-template-columns: repeat(1, 1fr);
         }
+        @media screen and (max-width: 850px) {
+          grid-template-columns: repeat(2, 1fr);
+        }
         .card {
           cursor: pointer;
           background: #ffffff;

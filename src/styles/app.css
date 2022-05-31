@@ -384,6 +384,13 @@ main .projectsSection .wrapper .projects {
   }
 }
 
+@media screen and (max-width: 850px) {
+  main .projectsSection .wrapper .projects {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 main .projectsSection .wrapper .projects .card {
   cursor: pointer;
   background: #ffffff;
