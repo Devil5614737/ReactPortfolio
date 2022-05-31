@@ -80,9 +80,9 @@ menu.classList.toggle('active');
       </div>
      
       <div className="menuBtn" onClick={handleNav}>
-          {open?<svg width="20" height="20" viewBox="0 0 18 18" fill="white" >
-<path d="M17 1L1 17M17 17L1 1L17 17Z" stroke="white" stroke-width="2" stroke-linecap="round"/>
-</svg>:  <svg width="30" height="30" viewBox="0 0 48 48" fill="none">
+          {open?<svg width="30" height="30" viewBox="0 0 18 18" fill={document.body.classList.contains('active')?'white':'black'} >
+<path d="M17 1L1 17M17 17L1 1L17 17Z" stroke={document.body.classList.contains('active')?'white':'black'} stroke-width="2" stroke-linecap="round"/>
+</svg>:  <svg width="30" height="30" viewBox="0 0 48 48" fill="black">
           <path
             d="M7.94971 11.9498H39.9497"
             stroke={document.body.classList.contains('active')?'white':'black'}
