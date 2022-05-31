@@ -1,4 +1,4 @@
-import { useState,useEffect } from "react";
+import { useState} from "react";
 
 const Navbar = ({ darkTheme, setDarkTheme, ...props }) => {
     const[open,setOpen]=useState(false);
