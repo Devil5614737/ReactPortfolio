@@ -370,7 +370,7 @@ main .projectsSection .wrapper .projects {
   grid-gap: 63px 33px;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 850px) {
   main .projectsSection .wrapper .projects {
     -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
@@ -384,10 +384,10 @@ main .projectsSection .wrapper .projects {
   }
 }
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 500px) {
   main .projectsSection .wrapper .projects {
-    -ms-grid-columns: (1fr)[2];
-        grid-template-columns: repeat(2, 1fr);
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
   }
 }
 
