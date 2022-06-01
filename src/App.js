@@ -130,11 +130,16 @@ function App() {
             </div>
           </div>
         </motion.div>
-        {/* ref={ref}
-      animate={controls}
-      initial={{opacity:0,y:112}}
-      variants={aboutSection}  */}
-        <motion.div id="skills" className="skillsSection">
+      
+        <motion.div
+          // ref={ref}
+          // animate={controls}
+          // initial={{opacity:0,y:112}}
+          // variants={projectsSection} 
+        
+        
+        
+        id="skills" className="skillsSection">
           <div className="wrapper">
             <div className="skillsTitle">
               <h1>Skills</h1>
@@ -399,7 +404,7 @@ function App() {
             </div>
           </div>
         </motion.div>
-        ref={ref}
+        {/* ref={ref} */}
       {/* animate={controls}
       initial={{opacity:0,y:112}}
       variants={aboutSection}  */}
@@ -447,7 +452,7 @@ function App() {
             </div>
           </div>
         </motion.div>
-        ref={ref}
+        
       {/* animate={controls}
       initial={{opacity:0,y:112}}
       variants={aboutSection}  */}
