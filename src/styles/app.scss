@@ -505,6 +505,9 @@ margin-bottom: 22px;
 font-size: 1.6em;
 padding-left: .5em;
             margin-top: 12px;
+            background-color: #EBEBEB;
+            border: none;
+            
           }
           textarea {
             width: 100%;
@@ -512,6 +515,8 @@ padding-left: .5em;
             height: 130px;
             margin-top: 12px;
             font-size: 1.6em;
+            background-color: #EBEBEB;
+            border: none;
 padding: .5em;
           }
          
@@ -635,16 +640,20 @@ body.active {
               color: white;
               form{
                   input{
-background-color: #132334;
-border: none;
+background-color: #132334 !important;
+border: none !important;
 
                   }
                   textarea{
-                    background-color: #132334;
-                    border: none;
+                    background-color: #132334 !important;
+                    border: none !important;
                   }
               }
           }
+    }
+    .formBtn{
+      background-color: blue !important; 
+  
     }
     
 }

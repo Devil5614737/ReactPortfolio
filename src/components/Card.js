@@ -1,8 +1,9 @@
 
 
 
-const Card = ({title,img,github,demo}) => {
+const Card = ({title,img,github,demo,tags}) => {
 
+console.log(tags)
 
 
     return (  
@@ -13,9 +14,9 @@ const Card = ({title,img,github,demo}) => {
            <div className="projectInfo">
                <p className="title">{title}</p>
                <div className="tags">
-                   <p>Next.js</p>
-                   <p>Tailwind</p>
-                   <p>Firebase</p>
+                   {tags.map(tag=><p>{tag}</p>)}
+                   
+                 
                </div>
                <div className="links">
                    <a href={github} target='_blank' rel="noreferrer">

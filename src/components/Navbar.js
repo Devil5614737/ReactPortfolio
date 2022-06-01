@@ -65,7 +65,7 @@ menu.classList.toggle('active');
           </div>
 
           <li>
-            <a href="#!">Home</a>
+            <a href="#home">Home</a>
           </li>
           <li>
             <a href="#projects">Projects</a>
@@ -148,7 +148,7 @@ menu.classList.toggle('active');
           </div>
 
           <li>
-            <a href="#!">Home</a>
+            <a href="#home">Home</a>
           </li>
           <li>
             <a href="#projects">Projects</a>

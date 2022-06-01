@@ -4,51 +4,45 @@ import Button from "./components/Button";
 import Card from "./components/Card";
 import { useState } from "react";
 import myImg from "./assets/myImg.jpg";
-// import { useViewportScroll,motion, useTransform } from 'framer-motion';
+
 import emailjs from "@emailjs/browser";
 import { useRef } from "react";
-import { motion ,useAnimation} from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
 import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
-import Ecommerce from './assets/ecommerce.png';
-import Google from './assets/google.png';
-import Instagram from './assets/instagram.png';
-import MarvelCharacters from './assets/marvelCharacter.webp';
-import SnakeGame from './assets/snakeGame.webp';
-import Netflix from './assets/thumbnail.webp';
+import Ecommerce from "./assets/ecommerce.png";
+import Google from "./assets/google.png";
+import Instagram from "./assets/instagram.png";
+import MarvelCharacters from "./assets/marvelCharacter.webp";
+import SnakeGame from "./assets/snakeGame.webp";
+import Netflix from "./assets/thumbnail.webp";
 
 function App() {
   const [darkTheme, setDarkTheme] = useState(false);
-  // const { scrollYProgress } = useViewportScroll()
   const controls = useAnimation();
   const [ref, inView] = useInView();
-
 
   const form = useRef();
 
   const handleTheme = () => {
     setDarkTheme(!darkTheme ? true : false);
     document.body.classList.toggle("active");
-    localStorage.setItem('theme','dark')
-    if(!document.body.classList.contains('active')){
-      localStorage.removeItem('theme')
-     }
+    localStorage.setItem("theme", "dark");
+    if (!document.body.classList.contains("active")) {
+      localStorage.removeItem("theme");
+    }
   };
 
-  useEffect(()=>{
-    localStorage.getItem('theme')&&document.body.classList.add('active')
-   
-  },[])
+  useEffect(() => {
+    localStorage.getItem("theme") && document.body.classList.add("active");
+  }, []);
   const projectsSection = {
-    visible: {y:0, opacity: 1, scale:1,transition: { duration: 1 } },
-    hidden: { opacity: 0, scale: 0 }
-
-
+    visible: { y: 0, opacity: 1, scale: 1, transition: { duration: 1 } },
+    hidden: { opacity: 0, scale: 0 },
   };
   // const aboutSection = {
   //   visible: {y:0, opacity: 1, transition: { duration: 1,delay:.4 } },
   //   hidden: { opacity: 0, scale: 0 }
-
 
   // };
 
@@ -56,14 +50,11 @@ function App() {
 
   // const scale = useTransform(scrollYProgress, [0, 1], [0.2, 2]);
 
-
   useEffect(() => {
     if (inView) {
       controls.start("visible");
     }
-    console.log(inView)
   }, [controls, inView]);
-
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -93,67 +84,135 @@ function App() {
 
   return (
     <>
-      <header>
+      <header id="home">
         <div className="navContainer">
           <Navbar darkTheme={darkTheme} onClick={handleTheme} />
         </div>
         <div className="hero">
           <div className="heroTextContainer">
-            <motion.p animate={{ y: 0,opacity:1,scale:1 }}  transition={{ duration: 1,delay:.5 }} initial={{opacity:0,scale:.5}} className="topTitle">Hi, I am Kaushik</motion.p>
-            <motion.p animate={{ y: 0,opacity:1,scale:1 }}  transition={{ duration: 1 }} initial={{opacity:0,scale:.5}} className="title">
+            <motion.p
+              animate={{ y: 0, opacity: 1, scale: 1 }}
+              transition={{ duration: 1, delay: 0.5 }}
+              initial={{ opacity: 0, scale: 0.5 }}
+              className="topTitle"
+            >
+              Hi, I am Kaushik
+            </motion.p>
+            <motion.p
+              animate={{ y: 0, opacity: 1, scale: 1 }}
+              transition={{ duration: 1 }}
+              initial={{ opacity: 0, scale: 0.5 }}
+              className="title"
+            >
               <span className="span1">Front-End</span> Web <br />
               De<span className="span2">veloper</span>
             </motion.p>
-            <motion.a animate={{ y: 0,opacity:1,scale:1 }}  transition={{ duration: 1,delay:.8 }} initial={{opacity:0,scale:.1}} href="#projects">
+            <motion.a
+              animate={{ y: 0, opacity: 1, scale: 1 }}
+              transition={{ duration: 1, delay: 0.8 }}
+              initial={{ opacity: 0, scale: 0.1 }}
+              href="#projects"
+            >
               <Button className="heroBtn">Projects</Button>
             </motion.a>
           </div>
         </div>
       </header>
       <main id="home">
-        <motion.div ref={ref}
-      animate={controls}
-      initial={{opacity:0,y:152}}
-      variants={projectsSection}  id="projects" className="projectsSection">
+        <motion.div
+          ref={ref}
+          animate={controls}
+          initial={{ opacity: 0, y: 152 }}
+          variants={projectsSection}
+          id="projects"
+          className="projectsSection"
+        >
           <div className="wrapper">
             <div className="projectsTitle">
               <h1>Projects</h1>
               <p>here are some of my projects</p>
             </div>
-            <div  className="projects">
-              <Card title="Netflix Clone" img={Netflix} github='https://github.com/Devil5614737/Netflix-Clone-next.js-' demo='https://netflix-clone-next-js-ten.vercel.app/'/>
-              <Card title="Ecommerce App" img={Ecommerce} github='https://github.com/Devil5614737/EcommerceShoeStore' demo='https://ecommerce-shoe-store.vercel.app/'/>
-              <Card title="Snake Game" img={SnakeGame} github='https://github.com/Devil5614737/SnakeGame' demo='https://snake-game-xi.vercel.app/'/>
-              <Card title="Google Clone" img={Google} github='https://github.com/Devil5614737/GoogleClone2' demo='https://google-clone2-steel.vercel.app/' />
-              <Card title="Instagram Clone" img={Instagram} github='https://github.com/Devil5614737/Instagram-2.0' demo='https://instagram-2-0-omega.vercel.app/'/>
-              <Card title="Marvel Characters" img={MarvelCharacters} github='https://github.com/Devil5614737/ComicCharactersApp' demo='https://comic-characters-app.vercel.app/characters/character'/>
+            <div className="projects">
+              <Card
+                title="Netflix Clone"
+                img={Netflix}
+                github="https://github.com/Devil5614737/Netflix-Clone-next.js-"
+                demo="https://netflix-clone-next-js-ten.vercel.app/"
+                tags={["Next.js", "Tailwind","Firebase"]}
+              />
+              <Card
+                title="Ecommerce App"
+                img={Ecommerce}
+                github="https://github.com/Devil5614737/EcommerceShoeStore"
+                demo="https://ecommerce-shoe-store.vercel.app/"
+                tags={["React", "Firebase"]}
+              />
+              <Card
+                title="Snake Game"
+                img={SnakeGame}
+                github="https://github.com/Devil5614737/SnakeGame"
+                demo="https://snake-game-xi.vercel.app/"
+                tags={["Html", "Vanilla js"]}
+              />
+              <Card
+                title="Google Clone"
+                img={Google}
+                github="https://github.com/Devil5614737/GoogleClone2"
+                demo="https://google-clone2-steel.vercel.app/"
+                tags={["React", "Sass"]}
+              />
+              <Card
+                title="Instagram Clone"
+                img={Instagram}
+                github="https://github.com/Devil5614737/Instagram-2.0"
+                demo="https://instagram-2-0-omega.vercel.app/"
+                tags={["React", "Node.js","MongoDb","Sass"]}
+              />
+              <Card
+                title="Marvel Characters"
+                img={MarvelCharacters}
+                github="https://github.com/Devil5614737/ComicCharactersApp"
+                demo="https://comic-characters-app.vercel.app/characters/character"
+                tags={["Next.js","Sass"]}
+              />
             </div>
           </div>
         </motion.div>
-      
+
         <motion.div
           // ref={ref}
           // animate={controls}
           // initial={{opacity:0,y:112}}
-          // variants={projectsSection} 
-        
-        
-        
-        id="skills" className="skillsSection">
+          // variants={projectsSection}
+
+          id="skills"
+          className="skillsSection"
+        >
           <div className="wrapper">
             <div className="skillsTitle">
               <h1>Skills</h1>
               <p>tools and technologies i know</p>
             </div>
             <div className="skillsContainer">
-            <div className="skills">
-              <svg width="85" height="85" viewBox="0 0 192 173" fill="none">
-<path d="M35.4121 147.055L21.9301 10.8125H170.07L156.57 147.034L95.91 162.188L35.4121 147.055Z" fill="#E44F26"/>
-<path d="M96 150.607L145.02 138.362L156.552 21.9548H96V150.607Z" fill="#F1662A"/>
-<path d="M96 72.4817H71.46L69.768 55.3709H96V38.6602H49.5L49.944 43.1473L54.498 89.1924H96V72.4817ZM96 115.878L95.916 115.899L75.264 110.877L73.944 97.5504H55.326L57.924 123.782L95.916 133.286L96 133.264V115.878Z" fill="#EBEBEB"/>
-<path d="M95.934 72.4817V89.1924H118.77L116.622 110.866L95.934 115.894V133.28L133.956 123.782L134.232 120.96L138.588 76.9688L139.044 72.4817H95.934ZM95.934 38.6602V55.3709H140.73L141.102 51.6189L141.948 43.1473L142.392 38.6602H95.934Z" fill="white"/>
-</svg>
-
+              <div className="skills">
+                <svg width="85" height="85" viewBox="0 0 192 173" fill="none">
+                  <path
+                    d="M35.4121 147.055L21.9301 10.8125H170.07L156.57 147.034L95.91 162.188L35.4121 147.055Z"
+                    fill="#E44F26"
+                  />
+                  <path
+                    d="M96 150.607L145.02 138.362L156.552 21.9548H96V150.607Z"
+                    fill="#F1662A"
+                  />
+                  <path
+                    d="M96 72.4817H71.46L69.768 55.3709H96V38.6602H49.5L49.944 43.1473L54.498 89.1924H96V72.4817ZM96 115.878L95.916 115.899L75.264 110.877L73.944 97.5504H55.326L57.924 123.782L95.916 133.286L96 133.264V115.878Z"
+                    fill="#EBEBEB"
+                  />
+                  <path
+                    d="M95.934 72.4817V89.1924H118.77L116.622 110.866L95.934 115.894V133.28L133.956 123.782L134.232 120.96L138.588 76.9688L139.044 72.4817H95.934ZM95.934 38.6602V55.3709H140.73L141.102 51.6189L141.948 43.1473L142.392 38.6602H95.934Z"
+                    fill="white"
+                  />
+                </svg>
 
                 <p>HTML</p>
               </div>
@@ -181,17 +240,34 @@ function App() {
 
                 <p>Javascript</p>
               </div>
-              
-              <div className="skills">
-              <svg width="85" height="85" viewBox="0 0 175 171" fill="none" >
-<path d="M32.2766 145.355L19.9938 10.6875H155.006L142.707 145.334L87.418 160.312L32.2766 145.355Z" fill="#1572B6"/>
-<path d="M87.5 148.866L132.18 136.763L142.691 21.7009H87.5V148.866Z" fill="#33A9DC"/>
-<path d="M87.5 70.4893H109.867L111.409 53.5764H87.5V37.0588H129.883L129.478 41.4888L125.327 87.0069H87.5V70.4893Z" fill="white"/>
-<path d="M87.6039 113.384L87.5273 113.405L68.7039 108.435L67.5008 95.2629H50.5312L52.8992 121.196L87.5219 130.59L87.6039 130.569V113.384Z" fill="#EBEBEB"/>
-<path d="M108.429 86.3069L106.394 108.425L87.5437 113.394V130.58L122.194 121.196L122.451 118.407L125.387 86.3069H108.429Z" fill="white"/>
-<path d="M87.5601 37.0588V53.5764H46.7304L46.3914 49.8625L45.6203 41.4888L45.2156 37.0588H87.5601ZM87.5 70.4893V87.0069H68.9117L68.5726 83.293L67.807 74.9193L67.4023 70.4893H87.5Z" fill="#EBEBEB"/>
-</svg>
 
+              <div className="skills">
+                <svg width="85" height="85" viewBox="0 0 175 171" fill="none">
+                  <path
+                    d="M32.2766 145.355L19.9938 10.6875H155.006L142.707 145.334L87.418 160.312L32.2766 145.355Z"
+                    fill="#1572B6"
+                  />
+                  <path
+                    d="M87.5 148.866L132.18 136.763L142.691 21.7009H87.5V148.866Z"
+                    fill="#33A9DC"
+                  />
+                  <path
+                    d="M87.5 70.4893H109.867L111.409 53.5764H87.5V37.0588H129.883L129.478 41.4888L125.327 87.0069H87.5V70.4893Z"
+                    fill="white"
+                  />
+                  <path
+                    d="M87.6039 113.384L87.5273 113.405L68.7039 108.435L67.5008 95.2629H50.5312L52.8992 121.196L87.5219 130.59L87.6039 130.569V113.384Z"
+                    fill="#EBEBEB"
+                  />
+                  <path
+                    d="M108.429 86.3069L106.394 108.425L87.5437 113.394V130.58L122.194 121.196L122.451 118.407L125.387 86.3069H108.429Z"
+                    fill="white"
+                  />
+                  <path
+                    d="M87.5601 37.0588V53.5764H46.7304L46.3914 49.8625L45.6203 41.4888L45.2156 37.0588H87.5601ZM87.5 70.4893V87.0069H68.9117L68.5726 83.293L67.807 74.9193L67.4023 70.4893H87.5Z"
+                    fill="#EBEBEB"
+                  />
+                </svg>
 
                 <p>CSS</p>
               </div>
@@ -279,7 +355,11 @@ function App() {
                     fill-rule="evenodd"
                     clip-rule="evenodd"
                     d="M0 98.5C0 44.0999 45.2192 0 101 0C156.78 0 202 44.0999 202 98.5C202 132.476 184.361 162.434 157.526 180.141L66.0792 55.2837C64.3778 52.9608 61.3326 51.976 58.5451 52.8471C55.7577 53.7182 53.8667 56.2459 53.8667 59.1005V157.6H67.3333V79.5915L145.843 186.784C132.332 193.324 117.106 197 101 197C45.2192 197 0 152.9 0 98.5ZM134.667 131.333V52.5333H148.133V131.333H134.667Z"
-                    fill={document.body.classList.contains('active')?'white':'black'}
+                    fill={
+                      document.body.classList.contains("active")
+                        ? "white"
+                        : "black"
+                    }
                   />
                 </svg>
 
@@ -335,7 +415,11 @@ function App() {
                 >
                   <path
                     d="M138.75 65.3812C133.125 63.6054 128.161 60.4126 124.425 56.1687C120.308 51.4403 115.065 47.6378 109.099 45.052C103.132 42.4662 96.5992 41.1657 90 41.2499C81.1227 40.6737 72.3344 43.1835 65.385 48.2797C58.4357 53.3759 53.8353 60.6844 52.5 68.7499C55.13 64.716 59.0884 61.5509 63.8055 59.7101C68.5225 57.8694 73.755 57.4478 78.75 58.5062C84.3652 60.3336 89.3219 63.5451 93.075 67.7874C97.2147 72.4781 102.467 76.2413 108.433 78.7908C114.398 81.3403 120.919 82.6089 127.5 82.4999C136.377 83.0762 145.166 80.5664 152.115 75.4702C159.064 70.374 163.665 63.0655 165 54.9999C162.418 59.0821 158.472 62.295 153.745 64.1643C149.019 66.0336 143.761 66.4602 138.75 65.3812ZM41.25 99.6187C46.8746 101.394 51.8394 104.587 55.575 108.831C59.6921 113.56 64.9346 117.362 70.9012 119.948C76.8679 122.534 83.4008 123.834 90 123.75C98.8773 124.326 107.666 121.816 114.615 116.72C121.564 111.624 126.165 104.315 127.5 96.25C124.87 100.284 120.912 103.449 116.195 105.29C111.478 107.131 106.245 107.552 101.25 106.494C95.6348 104.666 90.6781 101.455 86.925 97.2125C82.7742 92.5334 77.5196 88.7784 71.5568 86.2301C65.594 83.6817 59.0783 82.4063 52.5 82.4999C43.6227 81.9237 34.8344 84.4335 27.885 89.5297C20.9357 94.6259 16.3353 101.934 15 110C17.5823 105.918 21.5281 102.705 26.2548 100.836C30.9814 98.9663 36.2386 98.5397 41.25 99.6187Z"
-                    fill={document.body.classList.contains('active')?'white':'black'}
+                    fill={
+                      document.body.classList.contains("active")
+                        ? "white"
+                        : "black"
+                    }
                   />
                 </svg>
 
@@ -405,7 +489,7 @@ function App() {
           </div>
         </motion.div>
         {/* ref={ref} */}
-      {/* animate={controls}
+        {/* animate={controls}
       initial={{opacity:0,y:112}}
       variants={aboutSection}  */}
         <motion.div id="about" className="aboutSection">
@@ -452,8 +536,8 @@ function App() {
             </div>
           </div>
         </motion.div>
-        
-      {/* animate={controls}
+
+        {/* animate={controls}
       initial={{opacity:0,y:112}}
       variants={aboutSection}  */}
         <motion.div id="contact" className="contactSection">
@@ -462,7 +546,11 @@ function App() {
               <h1>Contact</h1>
               <p>Wanna hire me? Let's Talk!</p>
               <div className="iconsContainer">
-                <a target="_blank" href="https://www.linkedin.com/in/kaushik-sheel/" rel="noreferrer">
+                <a
+                  target="_blank"
+                  href="https://www.linkedin.com/in/kaushik-sheel/"
+                  rel="noreferrer"
+                >
                   <svg width="25" height="25" viewBox="0 0 47 47" fill="none">
                     <path
                       d="M40.0462 39.5558H33.0823V28.8497C33.0823 26.2968 33.0359 23.0103 29.4604 23.0103C25.8333 23.0103 25.2783 25.792 25.2783 28.6639V39.555H18.3146V17.5392H24.9998V20.5479H25.0934C25.7624 19.4249 26.7292 18.5011 27.8908 17.8748C29.0524 17.2485 30.3652 16.9432 31.6896 16.9915C38.7478 16.9915 40.0491 21.549 40.0491 27.4782L40.0462 39.5558ZM10.4568 14.5299C8.22482 14.5303 6.41513 12.7543 6.41477 10.5633C6.4144 8.37226 8.22335 6.59576 10.4553 6.5954C12.6872 6.59486 14.4969 8.37082 14.4973 10.5618C14.4975 11.614 14.0719 12.6232 13.3142 13.3673C12.5564 14.1115 11.5286 14.5297 10.4568 14.5299ZM13.9388 39.5559H6.96757V17.5392H13.9386V39.5558L13.9388 39.5559ZM43.518 0.246522H3.46827C1.57542 0.225616 0.0231328 1.71411 0 3.57226V43.0516C0.0223984 44.9107 1.5745 46.4006 3.46809 46.3812H43.518C45.4156 46.4042 46.9737 44.9143 47 43.0516V3.5692C46.973 1.70745 45.4147 0.219127 43.518 0.243458"
@@ -470,7 +558,11 @@ function App() {
                     />
                   </svg>
                 </a>
-                <a target="_blank" href="https://github.com/Devil5614737" rel='noreferrer'>
+                <a
+                  target="_blank"
+                  href="https://github.com/Devil5614737"
+                  rel="noreferrer"
+                >
                   <svg width="25" height="25" viewBox="0 0 55 51" fill="none">
                     <path
                       fill-rule="evenodd"
@@ -500,7 +592,9 @@ function App() {
                 <textarea id="message" name="message" required></textarea>
               </div>
               <a href="#!" className="btn">
-                <input className="formBtn" type="submit" value="Submit" />
+                <input style={{
+                  backgroundColor:'blue'
+                }} className="formBtn" type="submit" value="Submit" />
               </a>
             </form>
           </div>

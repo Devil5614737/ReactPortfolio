@@ -704,6 +704,8 @@ main .contactSection .wrapper form .label input {
   font-size: 1.6em;
   padding-left: .5em;
   margin-top: 12px;
+  background-color: #EBEBEB;
+  border: none;
 }
 
 main .contactSection .wrapper form .label textarea {
@@ -712,6 +714,8 @@ main .contactSection .wrapper form .label textarea {
   height: 130px;
   margin-top: 12px;
   font-size: 1.6em;
+  background-color: #EBEBEB;
+  border: none;
   padding: .5em;
 }
 
@@ -818,12 +822,16 @@ body.active main .contactSection {
 }
 
 body.active main .contactSection form input {
-  background-color: #132334;
-  border: none;
+  background-color: #132334 !important;
+  border: none !important;
 }
 
 body.active main .contactSection form textarea {
-  background-color: #132334;
-  border: none;
+  background-color: #132334 !important;
+  border: none !important;
+}
+
+body.active .formBtn {
+  background-color: blue !important;
 }
 /*# sourceMappingURL=app.css.map */
