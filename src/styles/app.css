@@ -153,7 +153,8 @@ header .links2 {
   width: 100vw;
   height: 90vh;
   float: right;
-  position: absolute;
+  position: fixed;
+  top: 0;
   right: -130%;
   z-index: 1213;
   background-color: rgba(0, 0, 0, 0.9);
@@ -792,7 +793,7 @@ body.active main .projectsSection .wrapper .projects .card {
 }
 
 body.active main .projectsSection .wrapper .projects .card .projectInfo {
-  padding: 1em 1em;
+  padding: 2em 2em;
 }
 
 body.active main .projectsSection .wrapper .projects .card .projectInfo .title {
