@@ -16,6 +16,7 @@ import Instagram from "./assets/instagram.png";
 import MarvelCharacters from "./assets/marvelCharacter.webp";
 import SnakeGame from "./assets/snakeGame.webp";
 import Netflix from "./assets/thumbnail.webp";
+import MoviesApp from "./assets/moviesapp.png";
 
 function App() {
   const [darkTheme, setDarkTheme] = useState(false);
@@ -174,6 +175,13 @@ function App() {
                 github="https://github.com/Devil5614737/ComicCharactersApp"
                 demo="https://comic-characters-app.vercel.app/characters/character"
                 tags={["Next.js","Sass"]}
+              />
+              <Card
+                title="Movies App"
+                img={MoviesApp}
+                github="https://github.com/Devil5614737/MovieApp_next-js"
+                demo="https://movie-app-next-js.vercel.app/"
+                tags={["Next.js","Redux","Sass","Firebase"]}
               />
             </div>
           </div>
