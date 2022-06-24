@@ -184,13 +184,7 @@ function App() {
                 demo="https://movie-app-next-js.vercel.app/"
                 tags={["Next.js","Redux","Sass","Firebase"]}
               />
-              <Card
-                title="Movies App"
-                img={ImageGallery}
-                github="https://github.com/Devil5614737/ImageGallery_Next.js"
-                demo="https://image-gallery-next-js-beryl.vercel.app/"
-                tags={["Next.js","Firebase"]}
-              />
+          
             </div>
           </div>
         </motion.div>
