@@ -518,10 +518,7 @@ function App() {
             </div>
           </div>
         </motion.div>
-        {/* ref={ref} */}
-        {/* animate={controls}
-      initial={{opacity:0,y:112}}
-      variants={aboutSection}  */}
+      
         <motion.div id="about" className="aboutSection">
           <div className="wrapper">
             <div className="aboutTitle">
